@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Friends Forever 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffd6e0, #ffe6f7, #e0c3fc);
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 15px 25px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-radius: 0 0 30px 30px;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ff4b8b;
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      padding: 5px 10px;
+      transition: 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #ff82b0, #ffb3d1);
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+
+    nav a:hover {
+      color: #e63972;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Header with typing effect */
+    header {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #ff4b8b;
+      text-shadow: 2px 2px #fff;
+      border-right: 3px solid #ff4b8b;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 5s steps(30) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 25px;
+      padding: 30px;
+      margin: 25px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.04);
+    }
+
+    .card h2 {
+      color: #ff4b8b;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Cute Button */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #ff4b8b, #ff82b0);
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(255, 75, 139, 0.4);
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #ff82b0, #ff4b8b);
+      transform: scale(1.05);
+    }
+
+    /* Polaroid Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      background: #fff;
+      padding: 8px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      transform: rotate(-3deg);
+    }
+
+    .gallery img:nth-child(even) {
+      transform: rotate(3deg);
+    }
+
+    .gallery img:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      background: rgba(255,255,255,0.7);
+      border-radius: 20px 20px 0 0;
+      font-weight: 600;
+      color: #ff4b8b;
+      box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+    }
+
+    /* Floating kawaii emojis */
+    .float {
+      position: fixed;
+      bottom: -30px;
+      font-size: 24px;
+      animation: floatUp 8s linear infinite;
+      opacity: 0.9;
+      z-index: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#memories">Memories</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#note">Note</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>💖 Best Friends Forever 💖</h1>
+  </header>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="card" id="about">
+      <h2>🌸 About Us</h2>
+      <p>You are my partner in crime, my diary, I'm sorry tanya prank jadha hi hogaya 💕. Thank you for making my world brighter and happier every single day! ✨</p>
+    </div>
+
+    <div class="card" id="memories">
+      <h2>🎁 Memories</h2>
+      <p>From silly inside jokes to endless laughter, our memories are treasures I’ll cherish forever. Can’t wait for the adventures still waiting for us 🌈🌻.</p>
+    </div>
+
+    <div class="card" id="gallery">
+      <h2>📸 Our Gallery</h2>
+      <div class="gallery">
+        <!-- Replace kittens with your own pics -->
+        <img src="https://placekitten.com/300/300" alt="Cute memory 1">
+        <img src="https://placekitten.com/301/300" alt="Cute memory 2">
+        <img src="https://placekitten.com/302/300" alt="Cute memory 3">
+        <img src="https://placekitten.com/303/300" alt="Cute memory 4">
+      </div>
+    </div>
+
+    <div class="card" id="note">
+      <h2>💌 A Special Note</h2>
+      <p>No matter where life takes us, you’ll always be my favorite person. This little website is just a small gift to remind you how much you mean to me 🌸💖.</p>
+      <a href="#" class="btn" onclick="surprise()">Click for a Surprise 🎉</a>
+    </div>
+  </div>
+
+  <footer>
+    Made with 💖 and 🌸 by Your Bestie
+  </footer>
+
+  <!-- Floating emojis -->
+  <script>
+    const emojis = ["💖","🌸","✨","🌟","🎀"];
+    function createFloat() {
+      const float = document.createElement("div");
+      float.className = "float";
+      float.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
+      float.style.left = Math.random() * 100 + "vw";
+      float.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(float);
+      setTimeout(() => float.remove(), 8000);
+    }
+    setInterval(createFloat, 700);
+
+    // Surprise popup
+    function surprise() {
+      alert("🎀 I'm sorry dear You’re my forever bestie! Never forget how special you are 💕🌸✨");
+    }
+  </script>
+</body>
+</html>
